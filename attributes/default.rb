@@ -84,6 +84,7 @@ default["cinder"]["storage"]["netapp"]["nfsdirect"]["export"] = ""
 # http://docs.openstack.org/grizzly/openstack-block-storage/admin/content/ceph-rados.html
 # http://ceph.com/docs/next/rbd/rbd-openstack/
 default["cinder"]["storage"]["rbd"]["rbd_pool"] = "volumes"
+default["cinder"]["storage"]["rbd"]["rbd_pool_pg_num"] = "1000"
 default["cinder"]["storage"]["rbd"]["rbd_user"] = "volumes"
 default["cinder"]["storage"]["rbd"]["rbd_secret_uuid"] = ""
 
