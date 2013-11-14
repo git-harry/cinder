@@ -179,6 +179,7 @@ case node["cinder"]["storage"]["provider"]
           # create the pool with provided pg_num
           Mixlib::ShellOut.new("ceph osd pool create #{rbd_pool} #{rbd_pool_pg_num} #{rbd_pool_pg_num}").run_command
         end
+        notifies :restart, "service[cinder-volume]", :delayed
       end
     end
 end
